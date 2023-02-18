@@ -386,6 +386,9 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor \
     libssl.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/others/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
