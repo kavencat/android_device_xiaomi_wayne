@@ -366,7 +366,14 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/others/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -414,6 +421,10 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti
 
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
@@ -423,11 +434,16 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.3.vendor \
+    android.hardware.wifi.supplicant-V1-ndk.vendor \
+    android.hardware.wifi@1.0-service \
     hostapd \
+    hostapd_cli \
     libwifi-hal-qcom \
     libwpa_client \
+    vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor \
     WifiOverlay \
+    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
