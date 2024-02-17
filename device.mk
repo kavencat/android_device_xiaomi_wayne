@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V3-ndk.vendor \
     audio.bluetooth.default
 
 # Boot animation
@@ -427,6 +428,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
+    vendor.qti.hardware.qspa-V1-ndk \
+    vendor.qti.hardware.systemhelperaidl-V1-ndk
     rild \
     libavservices_minijail.vendor \
     librmnetctl \
