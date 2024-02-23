@@ -429,7 +429,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
     vendor.qti.hardware.qspa-V1-ndk \
-    vendor.qti.hardware.systemhelperaidl-V1-ndk
+    vendor.qti.hardware.systemhelperaidl-V1-ndk \
     rild \
     libavservices_minijail.vendor \
     librmnetctl \
