@@ -82,11 +82,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default
+    audio.bluetooth.default \
+    libldacBT_abr \
+    libldacBT_enc
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
@@ -95,10 +97,10 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.device@3.5:64 \
-    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.device@3.7 \
+    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.6:64 \
+    android.hardware.camera.provider@2.7:64 \
     camera.sdm660 \
     libdng_sdk.vendor \
     vendor.qti.hardware.camera.device@1.0:64
