@@ -174,12 +174,20 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk.vendor \
+    android.hardware.gnss-V2-ndk.vendor \
+    android.hardware.gnss-V3-ndk.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
     libbatching \
     libgeofencing \
     libgnss \
+    libgps.utils \
+    libloc_core \
+    liblocation_api \
     libsensorndkbridge \
     libwifi-hal-ctrl
 
@@ -425,6 +433,8 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
+    libjsoncpp \
+    libjsoncpp_ndk \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
