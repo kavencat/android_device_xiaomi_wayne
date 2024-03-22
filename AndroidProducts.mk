@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_wayne.mk
+    $(LOCAL_DIR)/cherish_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_wayne-userdebug \
-    lineage_wayne-user \
-    lineage_wayne-eng
+    cherish_wayne-userdebug \
+    cherish_wayne-user \
+    cherish_wayne-eng

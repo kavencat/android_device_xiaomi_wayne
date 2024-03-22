@@ -12,14 +12,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_wayne
+PRODUCT_NAME := CherishOS_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6X
 PRODUCT_MANUFACTURER := Xiaomi
+
+#Cherish Stuffs
+USE_LEGACY_BOOTANIMATION := true
+CHERISH_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+# Cherish props
+CHERISH_MAINTAINER := kavencat
+CHERISH_CHIPSET := sdm660
+CHERISH_BATTERY := 3010mAh
+CHERISH_DISPLAY := 1080x2160
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
