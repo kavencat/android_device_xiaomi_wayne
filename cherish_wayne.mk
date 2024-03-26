@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/wayne/device.mk)
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := CherishOS_wayne
+PRODUCT_NAME := cherish_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6X
@@ -30,6 +30,7 @@ CHERISH_MAINTAINER := kavencat
 CHERISH_CHIPSET := sdm660
 CHERISH_BATTERY := 3010mAh
 CHERISH_DISPLAY := 1080x2160
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
