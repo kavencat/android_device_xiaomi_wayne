@@ -264,6 +264,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/others/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.2.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor
@@ -428,6 +433,10 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti
+    
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 # Vibrator
 PRODUCT_PACKAGES += \
