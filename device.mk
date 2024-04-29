@@ -148,7 +148,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor
 
 # Dynamic Partitions
@@ -196,8 +196,7 @@ PRODUCT_COPY_FILES += \
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
-    android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl.recovery
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
