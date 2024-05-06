@@ -175,10 +175,14 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk.vendor \
+    android.hardware.gnss-V2-ndk.vendor \
+    android.hardware.gnss-V3-ndk.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
     libbatching \
+    libcurl \
     libgeofencing \
     libgnss \
     libsensorndkbridge \
@@ -196,6 +200,7 @@ PRODUCT_COPY_FILES += \
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
+    android.hardware.health-service.qti \
     android.hardware.health@2.1-service
 
 # HIDL
