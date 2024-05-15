@@ -181,12 +181,21 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
     libbatching \
     libcurl \
     libgeofencing \
     libgnss \
     libsensorndkbridge \
     libwifi-hal-ctrl
+    
+PRODUCT_PACKAGES += \
+    gnss_antenna_info.conf \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-xtwifi-client.policy \
+    gnss@2.0-xtwifi-inet-agent.policy
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
