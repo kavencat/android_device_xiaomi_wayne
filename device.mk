@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.wayne
+    android.hardware.biometrics.fingerprint@2.3-service.wayne
 
 # Fwk detect
 PRODUCT_PACKAGES += \
