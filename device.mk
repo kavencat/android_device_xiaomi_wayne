@@ -10,6 +10,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/wayne/wayne-vendor.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Declare as non AB device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
