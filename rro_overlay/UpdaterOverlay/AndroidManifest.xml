@@ -16,12 +16,12 @@
  */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cherish.updateroverlay"
+    package="org.evolution.updateroverlay"
     android:versionCode="1"
     android:versionName="1.0">
 
     <overlay
-        android:targetPackage="com.cherish.updater"
+        android:targetPackage="org.evolution.updater"
         android:priority="1"
         android:isStatic="true" />
 
