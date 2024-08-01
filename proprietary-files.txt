@@ -230,6 +230,11 @@ vendor/lib/libqomx_jpegenc.so|755c4717ff251af6b905c05399360752bc3ebfee
 vendor/lib/libqomx_jpegenc_pipe.so|e5ddc830a01c289348626b5d40937467b068b9a2
 vendor/lib/libremosaic_daemon.so|8ba197b4a6e62f45dd49859a42f2025b20779704
 vendor/lib/libseemore.so|4f51ba534eef1e6876c998d8e179c1f839e51a6b
+vendor/lib/libmmcamera_chromaflash_lib.so
+vendor/lib/libmmcamera_llvd.so
+vendor/lib/libmmcamera_optizoom_lib.so
+vendor/lib/libmmcamera_trueportrait_lib.so
+vendor/lib/libmmcamera_ubifocus_lib.so
 
 # Camera Actuators - from jasmine
 vendor/lib/libactuator_wayne_imx376_ofilm_back_ii_dw9763.so
