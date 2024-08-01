@@ -235,6 +235,12 @@ vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_trueportrait_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
+vendor/lib/libchromaflash.so
+vendor/lib/libllvd_smore.so
+vendor/lib/liboptizoom.so
+vendor/lib/libtrueportrait.so
+vendor/lib/libubifocus.so
+
 
 # Camera Actuators - from jasmine
 vendor/lib/libactuator_wayne_imx376_ofilm_back_ii_dw9763.so
