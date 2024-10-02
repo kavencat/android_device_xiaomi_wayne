@@ -29,7 +29,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/qcom/opensource/usb/etc \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/xiaomi
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
