@@ -65,6 +65,10 @@ function blob_fixup() {
         vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so | vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so | vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so | vendor/lib64/com.fingerprints.extension@1.0.so)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
+        vendor/lib64/mediadrm/libwvdrmengine.so|vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcrypto-v33.so" "${2}" || "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "$2"
+            ;;
     esac
 }
 

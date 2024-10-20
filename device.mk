@@ -82,13 +82,10 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default
+    android.hardware.bluetooth.audio-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -100,7 +97,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
@@ -138,6 +134,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libgralloc.qti \
     libtinyxml \
+    libtinyxml2 \
     libqdMetaData \
     libqdMetaData.system \
     libqdMetaData.system_ext
@@ -166,8 +163,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm-service.clearkey
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -218,6 +215,8 @@ PRODUCT_COPY_FILES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery \
     android.hardware.health@2.1-impl:64 \
     android.hardware.health@2.1-service \
     android.hardware.health@2.1-impl.recovery
@@ -277,7 +276,6 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor
 
 # Lights
@@ -308,6 +306,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     android.system.net.netd@1.1.vendor
+    
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -375,7 +377,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.wayne-libperfmgr
+    android.hardware.power-service.lineage-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/others/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -391,6 +393,8 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libcrypto-v33 \
     libcrypto_utils.vendor \
     libjson \
     libjsoncpp.vendor \
@@ -411,13 +415,12 @@ PRODUCT_PACKAGES += \
     rild \
     libavservices_minijail.vendor \
     librmnetctl \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full \
+    libxml2
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti \
-    android.hardware.thermal-service.qti \
-    android.hardware.thermal-V1-ndk.vendor \
     android.hardware.thermal@2.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -444,8 +447,7 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti \
-    android.hardware.usb.gadget@1.2-service-qti \
-    libusbhost.vendor
+    android.hardware.usb.gadget@1.2-service-qti
     
 # VNDK
 PRODUCT_COPY_FILES += \
@@ -461,6 +463,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V2-ndk.vendor \
     android.hardware.wifi-V1-ndk.vendor \
     android.hardware.wifi.hostapd-V1-ndk.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     hostapd \
     ipacm \
     IPACM_cfg.xml \
