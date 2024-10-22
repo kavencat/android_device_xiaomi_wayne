@@ -216,6 +216,7 @@ PRODUCT_COPY_FILES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
+    libcrypto_shim \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery \
     android.hardware.health@2.1-impl:64 \
