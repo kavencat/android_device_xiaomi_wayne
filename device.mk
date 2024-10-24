@@ -98,7 +98,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.device@3.5:64 \
+    android.hardware.camera.device@3.6:64 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.6:64 \
@@ -192,6 +192,7 @@ PRODUCT_PACKAGES += \
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor
 
 # GPS
@@ -460,12 +461,9 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
-    android.hardware.wifi.supplicant-V1-ndk.vendor \
-    android.hardware.wifi.supplicant-V2-ndk.vendor \
-    android.hardware.wifi-V1-ndk.vendor \
-    android.hardware.wifi.hostapd-V1-ndk.vendor \
-    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    android.hardware.wifi@1.6-service \
+    android.hardware.wifi@1.6.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.3.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     hostapd \
     ipacm \
