@@ -460,7 +460,7 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.dual_role_usb \
-    android.hardware.usb.gadget@1.2-service.dual_role_usb
+    android.hardware.usb.gadget-service.qti
     
 # VNDK
 PRODUCT_COPY_FILES += \
