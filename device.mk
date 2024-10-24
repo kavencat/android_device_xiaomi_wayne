@@ -405,7 +405,6 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libcurl.vendor \
-    libcrypto-v33 \
     libcrypto_utils.vendor \
     libjson \
     libjsoncpp.vendor \
