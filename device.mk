@@ -85,7 +85,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.btconfigstore@1.0.vendor \
     android.hardware.btconfigstore@2.0.vendor \
-    android.hardware.bluetooth.audio-impl
+    android.hardware.bluetooth.audio-impl \
+    vendor.qti.hardware.bluetooth.audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -97,7 +100,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.device@3.6:64 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
@@ -134,7 +136,6 @@ PRODUCT_PACKAGES += \
     memtrack.sdm660 \
     libdisplayconfig \
     libgralloc.qti \
-    libtinyxml \
     libtinyxml2 \
     libqdMetaData \
     libqdMetaData.system \
@@ -143,7 +144,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.frameworks.displayservice@1.0.vendor \
-    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
@@ -153,6 +154,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.display.config@2.0
 
 PRODUCT_COPY_FILES += \
@@ -165,6 +168,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service-lazy \
     android.hardware.drm-service.clearkey
 
 # Dynamic Partitions
@@ -197,6 +202,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss-V2-ndk.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
@@ -230,6 +236,8 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
     android.hidl.memory@1.0.vendor \
+    android.hidl.memory.block@1.0 \
+    android.hidl.memory.block@1.0.vendor \
     libhidlmemory.vendor \
     libhidltransport \
     libhidltransport.vendor \
@@ -436,8 +444,10 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@2.1-impl:64 \
+    android.hardware.sensors@2.1-service \
+    android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 27
@@ -449,8 +459,8 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti \
-    android.hardware.usb.gadget@1.2-service-qti
+    android.hardware.usb@1.3-service.dual_role_usb \
+    android.hardware.usb.gadget@1.2-service.dual_role_usb
     
 # VNDK
 PRODUCT_COPY_FILES += \
@@ -461,8 +471,10 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.6-service \
-    android.hardware.wifi@1.6.vendor \
+    android.hardware.wifi-service \
+    android.hardware.wifi.vendor \
+    android.hardware.wifi.hostapd@1.3.vendor \
+    android.hardware.wifi.supplicant@2.2.vendor \
     vendor.qti.hardware.wifi.hostapd@1.3.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     hostapd \
@@ -501,6 +513,7 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V3-cpp \
+    vendor.qti.hardware.display.config-V5-ndk \
     libavservices_minijail_32 \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
