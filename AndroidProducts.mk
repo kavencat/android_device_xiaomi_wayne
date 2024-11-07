@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_wayne.mk
+    $(LOCAL_DIR)/pixelage_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_wayne-userdebug \
-    lineage_wayne-user \
-    lineage_wayne-eng
+    pixelage_wayne-userdebug \
+    pixelage_wayne-user \
+    pixelage_wayne-eng

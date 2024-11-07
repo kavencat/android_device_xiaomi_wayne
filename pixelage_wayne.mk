@@ -12,14 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_wayne
+PRODUCT_NAME := pixelage_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6X
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
