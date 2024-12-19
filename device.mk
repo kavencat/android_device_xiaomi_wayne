@@ -16,6 +16,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Declare as non AB device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
+# no AB_OTA
+AB_OTA_UPDATER := False
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
