@@ -247,8 +247,6 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -382,6 +380,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/others/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # QMI
+$(call inherit-product, external/json-c/Android.configure.mk)
 PRODUCT_PACKAGES += \
     libcrypto_utils.vendor \
     libjson \
@@ -435,6 +434,11 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti \
     android.hardware.usb.gadget@1.2-service-qti
     
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    usb_compositions.conf
+    
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
@@ -445,7 +449,9 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.3.vendor \
     hostapd \
+    hostapd_cli \
     libwifi-hal-qcom \
     libwifi-system-iface.vendor \
     libwpa_client \
@@ -457,6 +463,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# WiFi Firmware Symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
 
 # UpdaterOvelay
 PRODUCT_PACKAGES += \
