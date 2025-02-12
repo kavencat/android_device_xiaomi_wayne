@@ -139,18 +139,14 @@ void PowerSessionManager<HintManagerT>::removePowerSession(int64_t sessionId) {
         std::lock_guard<std::mutex> lock(mSessionTaskMapMutex);
         mSessionTaskMap.replace(sessionId, {}, &addedThreads, &removedThreads);
         mSessionTaskMap.remove(sessionId);
-}
+    }
 
-for (auto tid : removedThreads) {
+    for (auto tid : removedThreads) {
         if (!SetTaskProfiles(tid, {"NoResetUclampGrp"})) {
             ALOGE("Failed to set NoResetUclampGrp task profile for tid:%d", tid);
         }
+    }
     unregisterSession(sessionId);
-}
-
-void PowerSessionManager::setUclampMin(PowerHintSession *session, int val) {
-    std::lock_guard<std::mutex> guard(mLock);
-    setUclampMinLocked(session, val);
 }
 
 template <class HintManagerT>
